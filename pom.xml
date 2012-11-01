@@ -27,9 +27,9 @@
 		</developer>
 	</developers>
 	<scm>
-		<connection>scm:git:git://github.com/jenkinsci/gssh-plugin.git</connection>
-		<developerConnection>scm:git:git@github.com:jenkinsci/gssh-plugin.git</developerConnection>
-		<url>http://github.com/jenkinsci/gssh-plugin</url>
+		<connection>scm:git:https://JerryCai@github.com/jenkinsci/gssh-plugin.git</connection>
+		<developerConnection>scm:git:https://JerryCai@github.com/jenkinsci/gssh-plugin.git</developerConnection>
+		<url>https://github.com/jenkinsci/gssh-plugin</url>
 	</scm>
 	<!-- get every artifact through repo.jenkins-ci.org, which proxies all the 
 		artifacts that we need -->
