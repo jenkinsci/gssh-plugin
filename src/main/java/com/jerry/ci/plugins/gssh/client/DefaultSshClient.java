@@ -107,15 +107,12 @@ public class DefaultSshClient extends AbstractSshClient {
 			sftp.cd(serverLocation);
 			out = sftp.put(fileName, 777);
 			Thread.sleep(2000);
-			char[] buffer = new char[2048];
+			byte[] buffer = new byte[2048];
 			int n = -1;
-			InputStreamReader utf8Reader = new InputStreamReader(fileContent,
-					"UTF-8");
-			OutputStreamWriter utf8Writer = new OutputStreamWriter(out, "UTF-8");
-			while ((n = utf8Reader.read(buffer)) != -1) {
-				utf8Writer.write(buffer, 0, n);
+			while ((n = fileContent.read(buffer, 0, 2048)) != -1) {
+				out.write(buffer, 0, n);
 			}
-			utf8Writer.flush();
+			out.flush();
 			logger.println("upload file [" + fileName + "] to remote ["
 					+ serverLocation + "]success");
 		} catch (Exception e) {
